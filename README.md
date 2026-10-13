@@ -70,7 +70,7 @@
 - [michaelshimeles/terminal-rs](https://github.com/michaelshimeles/terminal-rs) - Bloomberg 风格的 Rust 交易终端，GPU 图表交互参考了用 REA 网站模式分析 TradingView 的笔记。
 - [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - 用 REA 静态拆解 Wispr Flow 的语音采集、转写和粘贴流程，每条结论标注已证实、推断或未知，再用 64 行代码在本地重建一个精简版。
 - [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) - 用 REA 研究 MIT 协议的 PowerToys 取色器后写出的 .NET 10 小工具。
-- [GitHub 讨论：从 REA 到一个 QuickBooks 风格的桌面应用](https://github.com/morluto/rea/discussions/2198) - 社区成员记录用 REA 做出 Mac + Windows 记账应用的过程。
+- [GitHub 讨论：从 REA 到一个 QuickBooks 风格的桌面应用](https://github.com/morluto/rea/discussions/2198) - 作者用 REA 研究 QuickBooks Desktop 试用版后，做出独立的本地记账应用 Ledger Reborn（Mac + Windows，早期预览版，写明了验证局限）。
 
 ### 硬件、协议与驱动
 
@@ -82,7 +82,7 @@
 - [NullLabTests/OpenBSD_netcat_REA](https://github.com/NullLabTests/OpenBSD_netcat_REA) - 用 REA + Ghidra 对 netcat-openbsd 1.234-1 二进制做完整静态分析，有流程图和方法说明。
 - [az9713/REA-demo](https://github.com/az9713/REA-demo) - 「REA 分析 REA」：用 REA 分析自己的安装包，先做可证伪的预测再对照源码自评，诚实记录了出错的地方。
 - [GitHub 讨论：从外部检查生产环境 Next.js + Stripe 应用的泄露](https://github.com/morluto/rea/discussions/1406) - 用网站模式对自己的线上应用做安全自查。
-- [GitHub 讨论：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - 把 REA 的输出和构建产物、官方文档逐条对照。
+- [GitHub 讨论：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - 把 REA 对剥离版二进制的分析结果和未剥离的构建、官方文档逐条对照。
 
 ## 同一波浪潮：AI 驱动的大型复刻项目
 

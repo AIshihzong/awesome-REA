@@ -37,6 +37,7 @@ Snapshot dates: likes from [songshikang0111/awesome-REA-cases](https://github.co
 - [Official showcases](#official-showcases)
 - [Community cases built with REA](#community-cases-built-with-rea)
 - [The wider wave: without confirmed REA](#the-wider-wave-without-confirmed-rea)
+- [Find projects by the app they replace](docs/by-app.md)
 - [Posts from X](docs/x-posts.zh-CN.md) (in Chinese)
 - [Plugins and integrations](#plugins-and-integrations)
 - [Guides and research](#guides-and-research)
@@ -171,6 +172,8 @@ Tools that REA drives, or tools in the same category.
 - [CyberPress](https://cyberpress.org/new-open-source-rea-tool/)
 - [RuntimeWire](https://runtimewire.com/article/matthew-berman-rea-ai-reverse-engineering)
 - [MayhemCode](https://www.mayhemcode.com/2026/10/rea-reverse-engineering-tool-can-ai.html)
+
+The [by-app index](docs/by-app.md) lists alternatives by the app they replace.
 
 More posts, roundups, critics and press are in [Press and posts about REA](docs/press-and-posts.md).
 

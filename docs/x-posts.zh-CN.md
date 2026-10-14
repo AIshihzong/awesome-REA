@@ -11,10 +11,10 @@
 
 - [宝玉：用 REA 逆向 Claude Slides 的编辑器](https://x.com/dotey/status/2109151666020794711) - 🇨🇳 下载网页端脚本和样式表，让 Codex 装上 REA Skill 还原混淆代码，再用 Claude Code 重写成结构清晰的工程，附完整步骤。代码在 [JimLiu/baocut](https://github.com/JimLiu/baocut) 的 `apps/slides-editor`（source-available，非开源协议）。8.1 万浏览（cases.json，2026-10-12 快照）。
 - [A.I.Warper](https://x.com/AIWarper/status/2109060856466264566) - 用 REA + Opus 5.5 把自己买过的一款 Steam 游戏反编译成 C#，不到 30 分钟在 Unity 里跑起来。约 46.7 万浏览（数字仅见于本 README，未经核实）。
-- [Vaibhav Sisinty：这周大家用它做了什么](https://x.com/VaibhavSisinty/status/2109618846453977359) - 案例盘点串：Steam 游戏反编译、初代 Apple TV 遥控器、空调遥控、LG 电视 Plex 客户端等。其中多数原帖没有写明用了 REA，属于同一波「AI 逆向」热潮。
+- [Vaibhav Sisinty：这周大家用它做了什么](https://x.com/VaibhavSisinty/status/2109618846453977359) - 案例盘点串：Steam 游戏反编译、初代 Apple TV 遥控器、空调遥控、LG 电视 Plex 客户端等。其中部分原帖没有写明用了 REA，属于同一波「AI 逆向」热潮。
 - [alex funk：45 分钟逆向初代 Apple TV 遥控器](https://x.com/alexzfunk/status/2108585025205592408) - 「software is kinda solved」，让 Siri Remote 通过蓝牙在 Linux 上工作，开源为 [a-funk/open-appleremote](https://github.com/a-funk/open-appleremote)。帖子和 README 都没有提到 REA。
-- [Ilter Canberk：逆向自家空调](https://x.com/icanberk/status/2109031477484937571) - 逆向空调的控制方式后 vibe coding 了一个菜单栏小应用，后来又用 Codex 移植到智能眼镜。未提到 REA。
-- [Vaibhav Sisinty：逆向 LG 电视做原生 Plex 客户端](https://x.com/VaibhavSisinty/status/2108103450995417177) - 转述 Reddit 上的案例：嫌官方 Plex 应用启动要 30 秒，用 Claude Code 从 C 写到 Rust，自己做了 OpenGL UI 框架，启动降到 3 秒。未提到 REA。
+- [Ilter Canberk：逆向自家空调](https://x.com/icanberk/status/2109031477484937571) - 逆向空调的控制方式后 vibe coding 了一个菜单栏小应用，后来又用 Codex 移植到智能眼镜。原帖未提及 REA；另有一条转述（[空调 + AR 眼镜](https://x.com/justhalfbit/status/2109524402765488499)）称用了 REA，两种说法有分歧，标为 Claim?。
+- [PlxNative：LG 电视原生 Plex 客户端](https://github.com/GLinnik21/plx-native)（经 [Vaibhav Sisinty 转述](https://x.com/VaibhavSisinty/status/2108103450995417177)）- 作者 GLinnik21 用 Ghidra + Claude Code 研究电视原生媒体栈，做出 Rust/OpenGL 客户端。约 7,268 赞是转述帖的数字，"30 秒到 3 秒"指用户选择界面，不是启动时间。
 
 ### 更多用户实战案例
 
@@ -27,9 +27,9 @@
 - [CapCut：做自己的视频编辑器](https://x.com/Mehal_Kay/status/2109665456735076494) - REA + Claude Code 重建字幕、转场、动画和文字功能，仍在进行中。
 - [剪映：让 Codex 调用原生编辑命令](https://x.com/gkxspace/status/2109644222978744682) - 🇨🇳 分析剪映后让 Codex 驱动它的编辑命令，作者计划脱敏后开源。
 - [ClearSpace：研究 CleanMyMac](https://x.com/iceman_shen/status/2109665812017746132) - 🇨🇳 Codex + REA 研究清理工具，做出原生 Mac 清理应用雏形。
-- [Typeless：本地语音输入替代品](https://x.com/i/status/2109971905336037671) - 作者称用 REA 分析 Typeless 后，用 Swift 做了离线运行的语音输入应用。
-- [Screen Studio：复刻录屏演示工具](https://x.com/i/status/2109843188341207283) - 作者称用 REA 拆解 Screen Studio，再用 Claude Code 复刻。
-- [MarkText：重建 HTML 导出](https://x.com/i/status/2109839329933824026) - 用 REA 分析 MarkText 的 HTML 导出并重建，17 项测试通过。
+- [Typeless：本地语音输入替代品](https://x.com/i/status/2109971905336037671) - 作者称用 REA 分析 Typeless 后，用 Swift 做了离线运行的语音输入应用。（链接是匿名的 x.com/i/status 地址，作者无法核实。）
+- [Screen Studio：复刻录屏演示工具](https://x.com/i/status/2109843188341207283) - 作者称用 REA 拆解 Screen Studio，再用 Claude Code 复刻。（链接是匿名的 x.com/i/status 地址，作者无法核实。）
+- [MarkText：重建 HTML 导出](https://x.com/i/status/2109839329933824026) - 用 REA 分析 MarkText 的 HTML 导出并重建，17 项测试通过。（链接是匿名的 x.com/i/status 地址，作者无法核实。）
 - [LightBurn：给自己的激光雕刻机做专用控制软件](https://x.com/LIQUID8RPF/status/2109789864891940904) - 作者称 16 分钟做出只针对 LONGER Ray5 的 LightBurn 替代，实机验收未完成。
 - [Claude Code：读懂 47MB 压缩 JavaScript](https://x.com/servasyy_ai/status/2108846931183378537) - 🇨🇳 让 Agent 调用 REA 阅读 Claude Code 的大型压缩代码包。
 - [二进制库：先分析再重写](https://x.com/leeoxiang/status/2109159806183538768) - 🇨🇳 用 REA 分析一个二进制库后，由 Claude Code 写出替代实现。
@@ -39,8 +39,7 @@
 **硬件与设备**
 
 - [智能马桶：从小程序蓝牙协议到 Mac 状态栏遥控器](https://x.com/thinkszyg/status/2109309251533570509) - 🇨🇳 分析微信小程序的蓝牙通信，在电脑上控制马桶翻盖，[后续](https://x.com/thinkszyg/status/2109526361971073103)扩展到家里其他设备。
-- [空调 + AR 眼镜手势控制](https://x.com/justhalfbit/status/2109524402765488499) - 分析官方 App 的请求，把开关和调温接到 AR 眼镜上。
-- [电视控制工作台](https://x.com/i/status/2109842197654692349) - 作者称用 REA 逆向电视，在电脑上实现输入切换、音量、遥控和屏幕镜像。
+- [电视控制工作台](https://x.com/i/status/2109842197654692349) - 作者称用 REA 逆向电视，在电脑上实现输入切换、音量、遥控和屏幕镜像。（链接是匿名的 x.com/i/status 地址，作者无法核实。）
 - [Homatics 电视盒子：修复 Dolby Vision 偏色](https://x.com/qwerty__cs/status/2109722857207115879) - 研究固件，修复升级 Android TV 14 后的绿屏偏色问题。
 - [蓝牙小手柄设置程序](https://x.com/corndogjpn2/status/2109289076243525916) - 协议已逆向，跨平台设置程序还在计划中。
 - [Elgato 4K X 采集卡](https://x.com/talkaboutdesign/status/2109795113807630735) - 开始研究采集卡，目标是更好的性能和更低的延迟。
@@ -48,7 +47,7 @@
 **游戏**
 
 - [《航空霸业 2》](https://x.com/TSFisher24nrex/status/2109452544913326086) - 用 REA + Kimi 研究 KOEI 1993 年的航空经营游戏。
-- [Chrome 恐龙游戏的加速规则](https://x.com/0xlangeai/status/2109595393260761111) - 读网页脚本并做实验，验证跑酷游戏怎样逐渐加速。
+- [跑酷游戏的加速规则（HTTP t-rex 页面）](https://x.com/0xlangeai/status/2109595393260761111) - 🇨🇳 作者用 REA + Codex 复刻，并发布原版、官方案例版和自制版的并排对比视频。注意：官方的恐龙案例见 [morluto/rea PR #1203](https://github.com/morluto/rea/pull/1203)，不是这条。
 
 **评测与对照实验**
 

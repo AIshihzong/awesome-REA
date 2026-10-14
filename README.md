@@ -1,66 +1,23 @@
 # Awesome REA [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> **用 AI Agent 把任何软件拆开、看懂、重做。** 收录 AI 逆向与 AI 复刻的开源项目、真实案例、工具、教程和讨论。每一条都人工核对过出处。
+> 精选 **REA（Reverse Engineer Anything）** 相关的开源项目、真实案例、插件集成、教程与社区讨论。
 
-**REA 是什么？** 「REA（Reverse Engineer Anything）」最早是开源工具 [morluto/rea](https://github.com/morluto/rea) 的名字。它在 2026 年 10 月登上 GitHub Trending 第一、几天内涨到十几万 Star 之后，在社区里已经成了一类做法的代称：**没有源代码，也让 AI Agent 弄清一个软件是怎么工作的，再用自己的代码重做一遍。** 本列表按这个更宽的含义收录，并用标签区分每个项目和 REA 工具的关系：
+**REA 是什么？** 本列表中的 REA 指 [morluto/rea](https://github.com/morluto/rea)：一个 MIT 协议的开源 MCP Server + CLI（npm 包 `rea-agents`），让 Claude Code、Codex、Cursor、Gemini CLI 等编码 Agent 在**没有源代码**的情况下检查原生二进制、JavaScript/Electron 应用、.NET 程序集、Android APK、固件和网站，解释某个功能是怎么实现的、给出证据，再在你自己的项目里重建它。它本身不做反编译，而是把 Hopper / Ghidra / IDA / JADX 等现有工具编排给 Agent 使用，并给每个结论附上 `evidence_id` 与局限说明。
 
-| 标签 | 含义 |
-|:---:|---|
-| 🔧 | 项目 README 或作者帖子写明使用了 [morluto/rea](https://github.com/morluto/rea) |
-| 🤖 | AI 辅助逆向完成，但没有写明用了 REA |
-| 🧪 | AI 辅助的 clean-room 重实现，主要依据公开资料和行为观察，不以逆向二进制为主 |
+**为什么火？** 2026 年 10 月 7 日 v5.0 发布后，REA 一天内登上 GitHub Trending 第一，几天内 Star 数从几千涨到十几万（截至 2026-10-13 约 18.9 万）。它让人们看到：以前要资深逆向工程师花几周做的事，比如逐字节复原 1990 年代游戏的函数、追踪 Electron 应用的 IPC 链路、复刻一整套桌面软件，现在可以由 AI Agent 完成。
 
 > ⚠️ 逆向工程受各地法律、软件许可协议和服务条款约束。本列表只收录公开信息，仅供学习、研究、互操作和软件保存用途；使用前请确认你有权分析目标软件。详见 [合规与争议](#合规与争议)。
 
-## 先看这些
-
-- 🔧 [DX-Ball：63 字节逐字节一致](https://rea.tools/showcase/dx-ball/) - 从一次声音调用追到 1996 年游戏的声像函数，复原的 C 代码通过 3,205 个原版 x86 对照用例，编译产物和原版完全相同。
-- 🔧 [一个人 + Agent 复原整套《东方 Project》](https://rea.tools/blog/touhou-reconstruction) - [N0zoM1z0](https://github.com/N0zoM1z0?tab=repositories) 复原了 th04、th08、th10 等多部作品，还把 th08 编译成 WebAssembly [在浏览器里玩](https://github.com/N0zoM1z0/th08-web)。
-- 🧪 [storytold/photocraft](https://github.com/storytold/photocraft) - 纯 Rust 重写的 Photoshop 式图像编辑器，一两周 Star 超过 5 万；同系列还有 Word、Excel、Illustrator 式的应用。
-- 🔧 [宝玉：逆向 Claude Slides 的编辑器](https://x.com/dotey/status/2109151666020794711) - 🇨🇳 从混淆的网页脚本还原出几乎完整的幻灯片编辑器，再让 Claude Code 重写成结构清晰的工程，附完整步骤。
-- 🔧 [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - 拆解 Wispr Flow 的语音输入流程，每条结论标注已证实、推断或未知，最后用 64 行代码在本地重建精简版。
-- 🔧 [Moxnatiy/OpenBattlefield2](https://github.com/Moxnatiy/OpenBattlefield2) - C++20 clean-room 重实现《战地 2》引擎，附 REA 调查工具。
-- 🤖 [a-funk/open-appleremote](https://github.com/a-funk/open-appleremote) - 作者说用大约 45 分钟逆向了初代 Apple TV 遥控器，让它通过蓝牙在 Linux 上工作。
-
-## 按被替代的软件找
-
-想找某个软件的开源复刻或复原？先查这张表。Star 数由 shields.io 实时显示。
-
-| 被替代 / 复原的软件 | 开源项目 | 方式 | Star |
-|---|---|:---:|---|
-| Photoshop | [storytold/photocraft](https://github.com/storytold/photocraft) | 🧪 | [![](https://img.shields.io/github/stars/storytold/photocraft?style=flat-square&label=%E2%98%85)](https://github.com/storytold/photocraft) |
-| Microsoft Word | [storytold/wordcraft](https://github.com/storytold/wordcraft) | 🧪 | [![](https://img.shields.io/github/stars/storytold/wordcraft?style=flat-square&label=%E2%98%85)](https://github.com/storytold/wordcraft) |
-| Excel | [storytold/gridcraft](https://github.com/storytold/gridcraft) | 🧪 | [![](https://img.shields.io/github/stars/storytold/gridcraft?style=flat-square&label=%E2%98%85)](https://github.com/storytold/gridcraft) |
-| Illustrator | [storytold/vectorcraft](https://github.com/storytold/vectorcraft) | 🧪 | [![](https://img.shields.io/github/stars/storytold/vectorcraft?style=flat-square&label=%E2%98%85)](https://github.com/storytold/vectorcraft) |
-| Roblox 引擎 | [AsyncFinn/rook](https://github.com/AsyncFinn/rook) | 🧪 | [![](https://img.shields.io/github/stars/AsyncFinn/rook?style=flat-square&label=%E2%98%85)](https://github.com/AsyncFinn/rook) |
-| 《英雄无敌 IV》引擎 | [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) | 🧪 | [![](https://img.shields.io/github/stars/tallowmere/free-heroes4?style=flat-square&label=%E2%98%85)](https://github.com/tallowmere/free-heroes4) |
-| 《战地 2》Refractor 2 引擎 | [Moxnatiy/OpenBattlefield2](https://github.com/Moxnatiy/OpenBattlefield2) | 🔧 | [![](https://img.shields.io/github/stars/Moxnatiy/OpenBattlefield2?style=flat-square&label=%E2%98%85)](https://github.com/Moxnatiy/OpenBattlefield2) |
-| 《GunZ: The Duel》 | [OpenRsG/GunZRs](https://github.com/OpenRsG/GunZRs) | 🔧 | [![](https://img.shields.io/github/stars/OpenRsG/GunZRs?style=flat-square&label=%E2%98%85)](https://github.com/OpenRsG/GunZRs) |
-| DX-Ball 1.07 | [N0zoM1z0/dx-ball](https://github.com/N0zoM1z0/dx-ball) | 🔧 | [![](https://img.shields.io/github/stars/N0zoM1z0/dx-ball?style=flat-square&label=%E2%98%85)](https://github.com/N0zoM1z0/dx-ball) |
-| 《东方 Project》PC-98 / Windows 作品 | [N0zoM1z0/th04](https://github.com/N0zoM1z0/th04) | 🔧 | [![](https://img.shields.io/github/stars/N0zoM1z0/th04?style=flat-square&label=%E2%98%85)](https://github.com/N0zoM1z0/th04) |
-| 《Ski or Die》雪球大战 | [tuunanet/rea-ski-or-die-reconstruction](https://github.com/tuunanet/rea-ski-or-die-reconstruction) | 🔧 | [![](https://img.shields.io/github/stars/tuunanet/rea-ski-or-die-reconstruction?style=flat-square&label=%E2%98%85)](https://github.com/tuunanet/rea-ski-or-die-reconstruction) |
-| Gemtree《Desktop Games》 | [ucodia/desktop-games-nostalgia](https://github.com/ucodia/desktop-games-nostalgia) | 🔧 | [![](https://img.shields.io/github/stars/ucodia/desktop-games-nostalgia?style=flat-square&label=%E2%98%85)](https://github.com/ucodia/desktop-games-nostalgia) |
-| Paper（无限画布设计） | [michaelshimeles/paper-rs](https://github.com/michaelshimeles/paper-rs) | 🔧 | [![](https://img.shields.io/github/stars/michaelshimeles/paper-rs?style=flat-square&label=%E2%98%85)](https://github.com/michaelshimeles/paper-rs) |
-| OBS Studio（录屏） | [michaelshimeles/rec-rs](https://github.com/michaelshimeles/rec-rs) | 🔧 | [![](https://img.shields.io/github/stars/michaelshimeles/rec-rs?style=flat-square&label=%E2%98%85)](https://github.com/michaelshimeles/rec-rs) |
-| TradingView 图表交互 | [michaelshimeles/terminal-rs](https://github.com/michaelshimeles/terminal-rs) | 🔧 | [![](https://img.shields.io/github/stars/michaelshimeles/terminal-rs?style=flat-square&label=%E2%98%85)](https://github.com/michaelshimeles/terminal-rs) |
-| Wispr Flow（语音输入） | [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) | 🔧 | [![](https://img.shields.io/github/stars/az9713/wispr-flow-rea-teardown?style=flat-square&label=%E2%98%85)](https://github.com/az9713/wispr-flow-rea-teardown) |
-| PowerToys 取色器 | [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) | 🔧 | [![](https://img.shields.io/github/stars/iammukeshm/hexgrab?style=flat-square&label=%E2%98%85)](https://github.com/iammukeshm/hexgrab) |
-| 罗技 G HUB | [Slyvan25/OpenGHub](https://github.com/Slyvan25/OpenGHub) | 🔧 | [![](https://img.shields.io/github/stars/Slyvan25/OpenGHub?style=flat-square&label=%E2%98%85)](https://github.com/Slyvan25/OpenGHub) |
-| PreSonus AudioBox VSL 驱动 | [grisuno/VSL-DSP](https://github.com/grisuno/VSL-DSP) | 🔧 | [![](https://img.shields.io/github/stars/grisuno/VSL-DSP?style=flat-square&label=%E2%98%85)](https://github.com/grisuno/VSL-DSP) |
-| 初代 Apple TV Siri Remote | [a-funk/open-appleremote](https://github.com/a-funk/open-appleremote) | 🤖 | [![](https://img.shields.io/github/stars/a-funk/open-appleremote?style=flat-square&label=%E2%98%85)](https://github.com/a-funk/open-appleremote) |
-
 ## 目录
 
-- [先看这些](#先看这些)
-- [按被替代的软件找](#按被替代的软件找)
 - [官方资源](#官方资源)
 - [官方案例](#官方案例)
-- [🔧 社区案例：写明使用 REA](#-社区案例写明使用-rea)
+- [社区案例：用 REA 做出来的东西](#社区案例用-rea-做出来的东西)
   - [经典游戏复原](#经典游戏复原)
   - [桌面应用与工具复刻](#桌面应用与工具复刻)
   - [硬件、协议与驱动](#硬件协议与驱动)
   - [安全分析与评测](#安全分析与评测)
-- [🧪🤖 AI 复刻与逆向项目：未写明使用 REA](#-ai-复刻与逆向项目未写明使用-rea)
+- [同一波浪潮：AI 驱动的大型复刻项目](#同一波浪潮ai-驱动的大型复刻项目)
 - [插件与集成](#插件与集成)
 - [教程与深度调研](#教程与深度调研)
 - [相关 MCP 逆向工具](#相关-mcp-逆向工具)
@@ -92,9 +49,9 @@
 - [博客：逆向工程的工业革命](https://rea.tools/blog/touhou-reconstruction) - 官方复盘用 Agent 批量复原东方 Project 游戏源码。
 - [博客：逆向工程需要更大的模型吗？](https://rea.tools/blog/reverse-engineering-models) - 不同模型在逆向任务上的表现对比。
 
-## 🔧 社区案例：写明使用 REA
+## 社区案例：用 REA 做出来的东西
 
-以下项目都在 README 中写明使用了 REA。
+以下项目都在 README 中写明使用了 REA。Star 数会变化，这里不列出。
 
 ### 经典游戏复原
 
@@ -127,17 +84,17 @@
 - [GitHub 讨论：从外部检查生产环境 Next.js + Stripe 应用的泄露](https://github.com/morluto/rea/discussions/1406) - 用网站模式对自己的线上应用做安全自查。
 - [GitHub 讨论：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - 把 REA 的输出和构建产物、官方文档逐条对照。
 
-## 🧪🤖 AI 复刻与逆向项目：未写明使用 REA
+## 同一波浪潮：AI 驱动的大型复刻项目
 
-这些项目和 REA 同期在 X 和 GitHub 上走红，常被拿来和 REA 一起讨论「AI 能做多复杂的软件工程」，但 README 没有写明使用 REA。
+这些项目和 REA 同期在 X 和 GitHub 上走红，都是 AI 辅助的 clean-room 重实现，常被拿来和 REA 一起讨论「AI 能做多复杂的软件工程」。**它们的 README 没有写明使用 REA**，收录在这里作为背景参考。
 
-- 🧪 [storytold/photocraft](https://github.com/storytold/photocraft) - ArtCraft 社区用纯 Rust clean-room 重写的 Photoshop 式图像编辑器，GPU 合成、调整图层、曲线等，Star 数在一两周内超过 5 万。
-- 🧪 [storytold/wordcraft](https://github.com/storytold/wordcraft) - 同系列的 Word 式文字处理器，支持修订、引用、邮件合并和 .docx 读写。
-- 🧪 [storytold/gridcraft](https://github.com/storytold/gridcraft) - 同系列的 Excel 式电子表格，含公式与图表。
-- 🧪 [storytold/vectorcraft](https://github.com/storytold/vectorcraft) - 同系列的 Illustrator 式矢量绘图工具。同系列还有 FilmCraft、LightCraft、PdfCraft、DeckCraft、CADCraft 等，见 [storytold](https://github.com/storytold)。
-- 🧪 [AsyncFinn/rook](https://github.com/AsyncFinn/rook) - 用 Rust 重实现 Roblox 引擎，以 Roblox Studio 录制结果做一致性测试。
-- 🧪 [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) - C++23 重实现《魔法门之英雄无敌 IV》引擎，需要 GOG 原版文件，尚未完成。
-- 🤖 [a-funk/open-appleremote](https://github.com/a-funk/open-appleremote) - 让初代 Apple TV Siri Remote 在 Linux 上通过蓝牙工作：解锁遥控器、解码触控和按键报文、还原 tvOS 风格手势。纯 Python 标准库，MIT。作者称大约 45 分钟完成逆向。
+- [storytold/photocraft](https://github.com/storytold/photocraft) - ArtCraft 社区用纯 Rust clean-room 重写的 Photoshop 式图像编辑器，GPU 合成、调整图层、曲线等，Star 数在一两周内超过 5 万。
+- [storytold/wordcraft](https://github.com/storytold/wordcraft) - 同系列的 Word 式文字处理器，支持修订、引用、邮件合并和 .docx 读写。
+- [storytold/gridcraft](https://github.com/storytold/gridcraft) - 同系列的 Excel 式电子表格，含公式与图表。
+- [storytold/vectorcraft](https://github.com/storytold/vectorcraft) - 同系列的 Illustrator 式矢量绘图工具。同系列还有 FilmCraft、LightCraft、PdfCraft、DeckCraft、CADCraft 等，见 [storytold](https://github.com/storytold)。
+- [AsyncFinn/rook](https://github.com/AsyncFinn/rook) - 用 Rust 重实现 Roblox 引擎，以 Roblox Studio 录制结果做一致性测试。
+- [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) - C++23 重实现《魔法门之英雄无敌 IV》引擎，需要 GOG 原版文件，尚未完成。
+- [a-funk/open-appleremote](https://github.com/a-funk/open-appleremote) - 让初代 Apple TV Siri Remote 在 Linux 上通过蓝牙工作：解锁遥控器、解码触控和按键报文、还原 tvOS 风格手势。纯 Python 标准库，MIT。作者称大约 45 分钟完成逆向。
 
 ## 插件与集成
 
@@ -268,7 +225,6 @@ REA 走红的同时也带来不少争议，选用和传播案例时值得注意�
 欢迎通过 Issue 或 PR 推荐新的项目、案例和文章。收录标准：
 
 1. 优先收录**开源**项目，并附上源码链接。
-2. 按上面的标签标注：写明使用 REA 的标 🔧，AI 辅助逆向但没写明工具的标 🤖，AI clean-room 重实现标 🧪。拿不准时请在 PR 里附上出处，由维护者判断。
-3. 每条一行，格式为 `- 标签 [名称](链接) - 一句话说明它做了什么、怎么做到的。`
-4. 如果项目复刻或复原了某个具体软件，请同时把它加进 [按被替代的软件找](#按被替代的软件找) 的表格。
-5. 不收录镜像、纯 fork，或以侵权、绕过授权为主要目的的项目。
+2. 「社区案例」需要在项目 README 或文章中写明使用了 REA；没有写明的放在「同一波浪潮」。
+3. 每条一行，格式为 `- [名称](链接) - 一句话说明它做了什么、怎么用 REA 的。`
+4. 不收录镜像、纯 fork，或以侵权、绕过授权为主要目的的项目。

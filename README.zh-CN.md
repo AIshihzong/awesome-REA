@@ -31,6 +31,8 @@
 快照日期：赞数来自 [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases)（2026-10-12）。
 
 - [按被替代的软件找项目](docs/by-app.zh-CN.md)：Photoshop、Word、Excel、OBS、Roblox 引擎等替代项目的索引。
+- [REA 说法核实](docs/is-it-rea.zh-CN.md)：逐个案例核对是否真的用了 REA。
+- [本周新增](docs/new-this-week.zh-CN.md)
 
 > ⚠️ 逆向工程受各地法律、软件许可协议和服务条款约束。本列表只收录公开信息，仅供学习、研究、互操作和软件保存用途；使用前请确认你有权分析目标软件。详见[合规与争议](#合规与争议)。
 
@@ -46,6 +48,9 @@
 - [其他列表](#其他列表)
 - [社区讨论与媒体](#社区讨论与媒体)
 - [按被替代的软件找项目](docs/by-app.zh-CN.md)
+- [REA 说法核实](docs/is-it-rea.zh-CN.md)
+- [本周新增](docs/new-this-week.zh-CN.md)
+- [投稿模板](.github/ISSUE_TEMPLATE/case.yml)
 - [关于 REA 的帖子与报道](docs/press-and-posts.zh-CN.md)
 - [合规与争议](#合规与争议)
 - [贡献](#贡献)

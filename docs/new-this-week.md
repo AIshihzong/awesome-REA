@@ -1,5 +1,7 @@
 # New this week
 
+**English** · [简体中文](new-this-week.zh-CN.md)
+
 Entries added in the past week, by the date each repo was created on GitHub. Dates may move when a repo is renamed or re-created.
 
 | Created | Project | Tag | What it is |

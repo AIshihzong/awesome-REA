@@ -1,5 +1,7 @@
 # Did it really use REA?
 
+**English** · [简体中文](is-it-rea.zh-CN.md)
+
 Many cases are described as "built with REA". This page checks each one against the project's own README, the author's post, or the official showcase, and records what we found. Checked on 2026-10-14. X posts could not be opened from our environment, so for them we rely on the third-party case records named in the table.
 
 | Case | README says REA? | Other source | Result |

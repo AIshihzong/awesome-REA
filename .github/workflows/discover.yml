@@ -1,0 +1,30 @@
+name: Daily discovery
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Search for new candidates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/discover.py "$RUNNER_TEMP/candidates.md"
+
+      - name: Open or update the daily issue
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Daily discovery: $(date -u +%F)"
+          gh label create candidates --color 0E8A16 --description "Auto-found REA candidates" 2>/dev/null || true
+          gh issue create --title "$title" --label candidates --body-file "$RUNNER_TEMP/candidates.md"

@@ -71,11 +71,16 @@
 - [az9713/wispr-flow-rea-teardown](https://github.com/az9713/wispr-flow-rea-teardown) - 用 REA 静态拆解 Wispr Flow 的语音采集、转写和粘贴流程，每条结论标注已证实、推断或未知，再用 64 行代码在本地重建一个精简版。
 - [iammukeshm/hexgrab](https://github.com/iammukeshm/hexgrab) - 用 REA 研究 MIT 协议的 PowerToys 取色器后写出的 .NET 10 小工具。
 - [GitHub 讨论：从 REA 到一个 QuickBooks 风格的桌面应用](https://github.com/morluto/rea/discussions/2198) - 作者用 REA 研究 QuickBooks Desktop 试用版后，做出独立的本地记账应用 Ledger Reborn（Mac + Windows，早期预览版，写明了验证局限）。
+- [JimLiu/baocut](https://github.com/JimLiu/baocut) - 宝玉（[@dotey](https://x.com/dotey/status/2109151666020794711)）用 Codex + REA 逆向 Claude Slides 混淆后的前端，再用 Claude Code 重写，把幻灯片编辑器接进自己的视频 Agent，代码已公开提交。
+- [wquguru/cameo](https://github.com/wquguru/cameo) - 用 REA 从桌面角色应用 Cameo 的编译程序产出伪代码，再由 Claude Code 还原交互（[原帖](https://x.com/wquguru/status/2109521555953013004)）。
+- [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - 逆向 Axure RP 的 .rp 原型文件格式，提供 CLI / MCP，让 AI 直接读写原生交互原型（[原帖](https://x.com/LilZeeinthex/status/2109660213850800621)）。
+- [AdamLinCodes/AdamTerm](https://github.com/AdamLinCodes/AdamTerm) - 用 REA 研究 Ghostty 后做的极简 macOS 终端。
 
 ### 硬件、协议与驱动
 
 - [grisuno/VSL-DSP](https://github.com/grisuno/VSL-DSP) - PreSonus AudioBox VSL 系列 USB 声卡的 Linux 内核模块，DSP 协议分析借助 LazyOwn 框架调用 REA 完成。
 - [Slyvan25/OpenGHub](https://github.com/Slyvan25/OpenGHub) - Linux 原生的开源罗技 G HUB 替代品，基于 HID++ 协议研究，支持鼠标、方向盘力反馈等。
+- [cudanexus/vd-streamer-linux](https://github.com/cudanexus/vd-streamer-linux) - 用 Claude Code + REA 分析 Virtual Desktop Streamer 官方安装包，复用协议库、替换 macOS 平台层，做出 Linux 适配；README 写明尚未在真实头显上验收（[原帖](https://x.com/cudanexus/status/2109767636452265990)）。
 
 ### 安全分析与评测
 
@@ -83,6 +88,7 @@
 - [az9713/REA-demo](https://github.com/az9713/REA-demo) - 「REA 分析 REA」：用 REA 分析自己的安装包，先做可证伪的预测再对照源码自评，诚实记录了出错的地方。
 - [GitHub 讨论：从外部检查生产环境 Next.js + Stripe 应用的泄露](https://github.com/morluto/rea/discussions/1406) - 用网站模式对自己的线上应用做安全自查。
 - [GitHub 讨论：剥离符号的 bzip2](https://github.com/morluto/rea/discussions/2254) - 把 REA 对剥离版二进制的分析结果和未剥离的构建、官方文档逐条对照。
+- [UnknownHacker1/rea-groundtruth](https://github.com/UnknownHacker1/rea-groundtruth) - 把 REA 的报告和代码里的真实情况逐项比对，为它的盲区提供一键复现脚本。
 
 ## 同一波浪潮：AI 驱动的大型复刻项目
 
@@ -94,6 +100,12 @@
 - [storytold/vectorcraft](https://github.com/storytold/vectorcraft) - 同系列的 Illustrator 式矢量绘图工具。同系列还有 FilmCraft、LightCraft、PdfCraft、DeckCraft、CADCraft 等，见 [storytold](https://github.com/storytold)。
 - [AsyncFinn/rook](https://github.com/AsyncFinn/rook) - 用 Rust 重实现 Roblox 引擎，以 Roblox Studio 录制结果做一致性测试。
 - [tallowmere/free-heroes4](https://github.com/tallowmere/free-heroes4) - C++23 重实现《魔法门之英雄无敌 IV》引擎，需要 GOG 原版文件，尚未完成。
+- [a-funk/open-appleremote](https://github.com/a-funk/open-appleremote) - 研究蓝牙协议，让 Apple TV 遥控器在 Linux 上当输入设备用，X 上[原帖](https://x.com/alexzfunk/status/2108585025205592408)获得 5,000 多个赞。
+- [designgears/wine-uwp](https://github.com/designgears/wine-uwp) - 用 Claude 辅助研究闭源应用所需接口，扩展 Wine，让 Shapr3D 等 Windows 商店应用在 Linux 上运行（[原帖](https://x.com/DesignGears/status/2109530620321788301)）。
+- [LG 电视上更快的 Plex 客户端](https://x.com/VaibhavSisinty/status/2108103450995417177) - Ghidra + Claude Code 研究 LG 原生媒体栈，作者称选择用户的界面从约 30 秒降到约 3 秒。
+- [Universal Modder](https://x.com/rehan_shei/status/2105161487509852622) - 用 AI 分析游戏引擎与素材格式，把 Minecraft 内容放进 GTA V 等游戏，1.4 万多个赞。
+- [Firefighter：DOS 二进制到 Rust](https://x.com/esrtweet/status/2106983467141509385) - Eric S. Raymond 用 AI 把老 DOS 游戏的 Pascal 逻辑恢复成可维护的 Rust 代码。
+- [《现代战争 2》多 Agent 反编译](https://x.com/momo5502/status/2108886652391141721) - 作者称 17 个 Agent 协作三个月，83% 的函数字节级匹配；代码未公开。
 
 ## 插件与集成
 
@@ -104,6 +116,10 @@
 - [pablodiazjorge/rea-casebook](https://github.com/pablodiazjorge/rea-casebook) - Claude Code mod，实时记录 REA 返回的证据，要求结论必须引用真实的 `evidence_id`，可导出 Markdown。
 - [laaielichter/reverseport](https://github.com/laaielichter/reverseport) - 受 REA 启发的 CLI + MCP，主打把逆向结果移植到 Godot、Unity、Unreal、three.js。
 - [rea-agents Homebrew formula](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - 社区维护的 Homebrew 安装方式。
+- [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - REA 的 Docker 镜像，Ghidra / Hopper / IDA 各一个，带完整逆向工具链，可直接接 MCP。
+- [Nowng/rea-mcp](https://github.com/Nowng/rea-mcp) - 给 LM Studio 用的 REA MCP Server，方便接本地模型。
+- [sickpyramid/ReaFuse](https://github.com/sickpyramid/ReaFuse) - 基于 REA 拆解两个项目、融合它们的能力，生成一个新项目并验证。
+- [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - 基于 REA 的逆向 Agent，加了一个以证据驱动的自我改进实验室。
 
 ## 教程与深度调研
 
@@ -131,8 +147,12 @@ REA 编排的底层工具，或同类的「给 Agent 用的逆向工具」。
 - [kaixinbaba/awesome-rea](https://github.com/kaixinbaba/awesome-rea) - 开源逆向、重实现与兼容替代品目录（[awesomerea.com](https://awesomerea.com)），不要求使用 REA。
 - [zhuyansen/awesome-ai-reverse-engineering](https://github.com/zhuyansen/awesome-ai-reverse-engineering) - AI 逆向工具列表，每个仓库都有安全评级，中英双语。
 - [DiscoverBox/awesome-ai-reverse](https://github.com/DiscoverBox/awesome-ai-reverse) - 🇨🇳 AI 辅助逆向工具清单，覆盖 MCP、Skill、插件、Agent，涉及 Web、二进制、移动端和流量分析。
+- [songshikang0111/awesome-REA-cases](https://github.com/songshikang0111/awesome-REA-cases) - 🇨🇳 每天 6 次追踪 REA 与 AI 逆向公开案例，已收录 130 多个，按游戏、硬件、应用、算法分类，并标明是否确认使用了 REA。
+- [Asymmetrical-1024/awsome-REA](https://github.com/Asymmetrical-1024/awsome-REA) - 🇨🇳 REA 案例合集，每条附 X 原帖截图、证据切片和验证边界。
 
 ## X（Twitter）热门帖子
+
+### 介绍与评论
 
 - [Matthew Berman](https://x.com/MatthewBerman/status/2108245653843509415) - 「Reverse Engineer Anything 😂 Software is done.」引发大规模传播的帖子之一。
 - [International Cyber Digest](https://x.com/IntCyberDigest/status/2108699960782774733) - GitHub Trending 第一时的介绍：「Software is dead, long live software!」
@@ -144,6 +164,59 @@ REA 编排的底层工具，或同类的「给 Agent 用的逆向工具」。
 - [lifcc](https://x.com/mylifcc/status/2108940999527690525) - 🇨🇳「一个开源项目一天暴涨 2 万多 Star」，讨论以后可以直接让 Claude Code 或 Codex 研究二进制、重建功能。
 - [TechVerser](https://x.com/realfxw/status/2106734209473581308) - 🇨🇳「AI 正在彻底重塑底层逆向工程的游戏规则」，介绍 REA 把逆向工具链封装成 Agent 外挂的思路。
 - [codila](https://x.com/0xCodila/status/2109623431763292649) - 「REA is most dangerous thing on the internet right now」，宣扬用它免费复刻付费功能，是争议的典型代表（见下文）。
+- [宝玉](https://x.com/dotey/status/2108794629172682783) - 🇨🇳 长文介绍 REA：怎么接进 Claude Code、Codex、Cursor，能分析哪些目标，隐私边界在哪里。
+- [刘小排](https://x.com/bourneliu66/status/2109882364705038422) - 🇨🇳「REA 只是一个 Hype」：认为它不是新的逆向技术，只是帮 Agent 调用已有工具，被自媒体过度炒作。很有代表性的反方观点。
+- [Khazix](https://x.com/Khazix0918/status/2109501787736813663) - 🇨🇳「AI 开始逆向一切，你电脑里的每个软件都要被迫开源了」。
+- [婷](https://x.com/shijianzhongg/status/2107979591348543520) - 🇨🇳 早期介绍：挖 App 隐藏功能、查可疑软件后门、学大厂代码思路。
+- [Mario Nawfal](https://x.com/RoundtableSpace/status/2109165852578992582) - 「Closed source is dead」，列出原生应用、Electron、APK、固件、合约字节码等目标。
+- [CyrilXBT](https://x.com/cyrilXBT/status/2109490499321299364) - 「你的 App 源码不再是秘密」，同类的爆款传播帖。
+- [Vaibhav Sisinty](https://x.com/VaibhavSisinty/status/2109618846453977359) - 汇总一周内大家用 REA 做出的东西，例如 Apple TV 遥控器和空调。
+- [darkzodchi](https://x.com/zodchiii/status/2109736071827476756) - REA + Claude Code 的上手长文：拿来读没文档的仓库、没公开 API 的应用和丢了源码的旧 .exe。
+- [K2S](https://x.com/k2sbhai/status/2106796616716062777) - 四步上手教程：安装、`rea setup`、接 Agent、提问。
+- [midudev](https://x.com/midudev/status/2107834472091598854) - 🇪🇸 西班牙语开发者社区的介绍帖。
+- [bearstech](https://x.com/bearstech/status/2109679666105655457) / [actu_ia](https://x.com/actu_ia/status/2107107539485958502) - 🇫🇷 法语介绍帖。
+- [xiangxiang103 的 REA 案例合集](https://x.com/xiangxiang103/status/2109813885641576795) - 🇨🇳 X 上整理的一批用户案例。
+
+### 用户实战案例
+
+以下都是作者在 X 上自述用 REA 做的事，多数没有公开代码，也没经过独立验证，阅读时请留意边界。
+
+**应用与功能复刻**
+
+- [宝玉：逆向 Claude Slides 编辑器](https://x.com/dotey/status/2109151666020794711) - 🇨🇳 下载混淆后的脚本和样式表，用 REA Skill 分析，再用 Claude Code 重写，几乎还原了完整功能，代码见 [baocut](https://github.com/JimLiu/baocut)。
+- [宝玉：Codex 浏览器的评论框](https://x.com/dotey/status/2109417222724600172) - 🇨🇳 分析 Electron 代码，找到网页唤起并预填评论框的接口；作者说明还不能直接把评论附加到输入框。
+- [macOS 预览：有无 REA 的对比](https://x.com/maheshboda006/status/2109154423712977359) - 同一作者分别用有 REA 和没有 REA 的方式重建缩放、旋转、标注和保存功能。
+- [CapCut：做自己的视频编辑器](https://x.com/Mehal_Kay/status/2109665456735076494) - REA + Claude Code 重建字幕、转场、动画和文字功能，仍在进行中。
+- [剪映：让 Codex 调用原生编辑命令](https://x.com/gkxspace/status/2109644222978744682) - 🇨🇳 分析剪映后让 Codex 驱动它的编辑命令，作者计划脱敏后开源。
+- [ClearSpace：研究 CleanMyMac](https://x.com/iceman_shen/status/2109665812017746132) - 🇨🇳 Codex + REA 研究清理工具，做出原生 Mac 清理应用雏形。
+- [Typeless：本地语音输入替代品](https://x.com/i/status/2109971905336037671) - 作者称用 REA 分析 Typeless 后，用 Swift 做了离线运行的语音输入应用。
+- [Screen Studio：复刻录屏演示工具](https://x.com/i/status/2109843188341207283) - 作者称用 REA 拆解 Screen Studio，再用 Claude Code 复刻。
+- [MarkText：重建 HTML 导出](https://x.com/i/status/2109839329933824026) - 用 REA 分析 MarkText 的 HTML 导出并重建，17 项测试通过。
+- [LightBurn：给自己的激光雕刻机做专用控制软件](https://x.com/LIQUID8RPF/status/2109789864891940904) - 作者称 16 分钟做出只针对 LONGER Ray5 的 LightBurn 替代，实机验收未完成。
+- [Claude Code：读懂 47MB 压缩 JavaScript](https://x.com/servasyy_ai/status/2108846931183378537) - 🇨🇳 让 Agent 调用 REA 阅读 Claude Code 的大型压缩代码包。
+- [二进制库：先分析再重写](https://x.com/leeoxiang/status/2109159806183538768) - 🇨🇳 用 REA 分析一个二进制库后，由 Claude Code 写出替代实现。
+- [网站重建](https://x.com/goan999999/status/2109080288823562734) - 🇨🇳 作者自述用 REA 辅助完成网站重建订单。
+- [TradingView 复刻流程](https://x.com/RohOnChain/status/2109347169316839434) - 传播较广的复刻流程帖，但没有证据表明恢复了付费指标。
+
+**硬件与设备**
+
+- [智能马桶：从小程序蓝牙协议到 Mac 状态栏遥控器](https://x.com/thinkszyg/status/2109309251533570509) - 🇨🇳 分析微信小程序的蓝牙通信，在电脑上控制马桶翻盖，[后续](https://x.com/thinkszyg/status/2109526361971073103)扩展到家里其他设备。
+- [空调 + AR 眼镜手势控制](https://x.com/justhalfbit/status/2109524402765488499) - 分析官方 App 的请求，把开关和调温接到 AR 眼镜上。
+- [电视控制工作台](https://x.com/i/status/2109842197654692349) - 作者称用 REA 逆向电视，在电脑上实现输入切换、音量、遥控和屏幕镜像。
+- [Homatics 电视盒子：修复 Dolby Vision 偏色](https://x.com/qwerty__cs/status/2109722857207115879) - 研究固件，修复升级 Android TV 14 后的绿屏偏色问题。
+- [蓝牙小手柄设置程序](https://x.com/corndogjpn2/status/2109289076243525916) - 协议已逆向，跨平台设置程序还在计划中。
+- [Elgato 4K X 采集卡](https://x.com/talkaboutdesign/status/2109795113807630735) - 开始研究采集卡，目标是更好的性能和更低的延迟。
+
+**游戏**
+
+- [Steam 游戏反编译成 C# 并在 Unity 启动](https://x.com/AIWarper/status/2109060856466264566) - 一次未具名游戏的测试，没有放出代码。
+- [《航空霸业 2》](https://x.com/TSFisher24nrex/status/2109452544913326086) - 用 REA + Kimi 研究 KOEI 1993 年的航空经营游戏。
+- [Chrome 恐龙游戏的加速规则](https://x.com/0xlangeai/status/2109595393260761111) - 读网页脚本并做实验，验证跑酷游戏怎样逐渐加速。
+
+**评测与对照实验**
+
+- [Codex 有无 REA 的对照](https://x.com/0xlangeai/status/2109603485914206498) - 🇨🇳 三个自制样本、六次运行、360 个用例验收，关注 REA 提供线索的价值，而不是速度排名。
+
 
 ## 社区讨论
 
@@ -172,6 +245,8 @@ REA 走红的同时也带来不少争议，选用和传播案例时值得注意�
 - **官方立场**：REA 只用于合法的研究、教育、互操作、软件保存，以及分析你拥有或获授权检查的软件。见 [DISCLAIMER.md](https://github.com/morluto/rea/blob/main/DISCLAIMER.md)。
 
 本列表不收录以绕过授权、复制付费功能或分发受版权保护资源为主要目的的项目。
+
+**谨防假冒下载**：GitHub 上出现了自称「REA 官方免费下载」的 zip 包仓库。REA 的唯一官方安装方式是 npm 上的 `rea-agents`（`npx rea-agents setup`），不要下载来路不明的压缩包或 exe。
 
 ## 贡献
 

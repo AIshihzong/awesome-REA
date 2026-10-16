@@ -75,6 +75,7 @@ Tags show the evidence source. Star counts are from 2026-10-14.
 - [tuunanet/rea-ski-or-die-reconstruction](https://github.com/tuunanet/rea-ski-or-die-reconstruction) - `REA` Rust + SDL2 rewrite of the 1990 DOS game *Ski or Die*. Assets come from your own copy.
 - [Moxnatiy/OpenBattlefield2](https://github.com/Moxnatiy/OpenBattlefield2) - `REA` C++20 clean-room reimplementation of the Battlefield 2 Refractor 2 engine. REA is documented in CLAUDE.md and `tools/rea.sh`, not the README. Needs the original game. MIT.
 - [OpenRsG/GunZRs](https://github.com/OpenRsG/GunZRs) - `REA` Rust + Bevy rewrite of *GunZ: The Duel*, reading the Steam install. The executable is packed, so REA's role in the port is limited. Apache-2.0.
+- [a-barzanti/ai-rebuilds](https://github.com/a-barzanti/ai-rebuilds) - `REA` Community collection of abandoned games rebuilt for the browser. Contributors use REA to write specs, then build from those specs. Ground rules forbid committing original game files.
 
 ### Apps and tools
 
@@ -88,6 +89,7 @@ Tags show the evidence source. Star counts are from 2026-10-14.
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` (author's reply) CLI and MCP for reading and writing Axure RP `.rp` prototype files. Validated only on macOS with Axure RP 11. MIT.
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `Claim?` The linked repo is the author's original desktop-pet app, not REA output. The author's follow-up post describes an REA-based reconstruction, but its source was not published.
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` Independent local accounting app, built after studying QuickBooks Desktop for Mac 2024 trial with REA. See [discussion #2198](https://github.com/morluto/rea/discussions/2198). Preview release. MIT.
+- [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` WinDirStat-style disk analyzer for Windows 11, written by Claude Code. The author used REA to study the shipped WinDirStat 2.5.0 binary first. The author says the code has not been reviewed, so treat it as experimental.
 
 ### Hardware, protocols and drivers
 
@@ -129,6 +131,8 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - Evidence-driven reverse-engineering agent with a self-improvement lab. Experimental, v0.1.0.
 - [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - Docker images for REA. Four variants: Ghidra + Hopper, ghidra, hopper, and ida. The IDA image does not ship IDA itself. linux/amd64 only.
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - One person's Homebrew tap. Not in homebrew-core.
+- [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - Third-party adapter that brings the morluto/rea MCP server into DeepSeek Harness as `mcp__rea__*` tools. Version 2.x installs the REA CLI, JDK and Ghidra for you.
+- [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill that turns REA findings into a specification, architecture, plan and validation steps for rebuilding an app, feature or format.
 
 ## Guides and research
 
@@ -140,6 +144,8 @@ These projects came up alongside REA. Their READMEs do not say REA was used, so 
 - [Reverse Engineer Anything: What the Viral REA MCP Actually Does (MindStudio)](https://www.mindstudio.ai/blog/reverse-engineer-anything-mcp) - What REA does, without the hype.
 - [Agentic Reverse Engineering: What REA Is and How to Start (El Solitario)](https://elsolitario.org/en/2026/10/10/rea-reverse-engineering-for-coding-agents/) - Getting started.
 - [How To Use REA To Clone Any Software In Minutes (Eric Tech, YouTube)](https://www.youtube.com/watch?v=FnB9tHKBJXQ) - Video tutorial.
+- [inematds/rea-engenharia-reversa](https://github.com/inematds/rea-engenharia-reversa) - 🇧🇷 Guide to REA in Portuguese, English and Spanish, with links, cases, an honest assessment and a test run.
+- [ZooHero500/reatool](https://github.com/ZooHero500/reatool) - Unofficial REA tutorials and comparisons for installing and using it with coding agents. Not affiliated with morluto.
 
 ## Related MCP reverse-engineering tools
 

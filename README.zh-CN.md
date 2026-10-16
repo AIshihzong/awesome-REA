@@ -91,6 +91,7 @@
 - [tuunanet/rea-ski-or-die-reconstruction](https://github.com/tuunanet/rea-ski-or-die-reconstruction) - `REA` 用 Rust + SDL2 重写 1990 年 MS-DOS 游戏《Ski or Die》的雪球大战小游戏，素材从你自己的游戏副本中提取。
 - [Moxnatiy/OpenBattlefield2](https://github.com/Moxnatiy/OpenBattlefield2) - `REA` 用 C++20 clean-room 重实现《战地 2》的 Refractor 2 引擎。REA 用法写在 CLAUDE.md 和 `tools/rea.sh` 中，README 未提及；需要原版游戏。MIT。
 - [OpenRsG/GunZRs](https://github.com/OpenRsG/GunZRs) - `REA` 用 Rust + Bevy 重写《GunZ: The Duel》，读取 Steam 安装的原版资源。原版可执行文件有加壳，REA 在移植中的作用有限。Apache-2.0。
+- [a-barzanti/ai-rebuilds](https://github.com/a-barzanti/ai-rebuilds) - `REA` 社区项目，把停止更新的游戏复原到浏览器中。贡献者用 REA 写出规格，再据此构建。规则禁止提交原版游戏文件。
 
 ### 桌面应用与工具复刻
 
@@ -104,6 +105,7 @@
 - [LilZeeCN/zee-rp](https://github.com/LilZeeCN/zee-rp) - `REA` 逆向 Axure RP 的 `.rp` 原型文件格式，提供 CLI 和 MCP，让 AI 读写原型。REA 的使用说明在作者回复中，README 未提。目前只在 macOS 和 Axure RP 11 上验证过。MIT。
 - [wquguru/cameo](https://github.com/wquguru/cameo) - `待核实` 链接的仓库是作者自己开发的原创桌面宠物应用，不是 REA 的产出。据作者的后续帖子，REA 用于产出伪代码，再由 Claude Code 还原交互，但重建源码未公开。
 - [lxistired/ledger-reborn](https://github.com/lxistired/ledger-reborn) - `REA` 用 REA 研究 QuickBooks Desktop for Mac 2024 试用版后，独立实现的本地记账应用，有早期预览版。REA 的说明见 [REA 讨论 #2198](https://github.com/morluto/rea/discussions/2198)。MIT。
+- [KarlssonChristoffer/DiskLens](https://github.com/KarlssonChristoffer/DiskLens) - `REA` 仿 WinDirStat 的 Windows 11 磁盘分析工具，由 Claude Code 编写。作者先用 REA 研究了已安装的 WinDirStat 2.5.0 二进制。作者称代码未经审阅，视为实验性项目。
 
 ### 硬件、协议与驱动
 
@@ -146,6 +148,8 @@
 - [dav1dngy/era-agent](https://github.com/dav1dngy/era-agent) - 基于 REA 的逆向 Agent，加入以证据驱动的自我改进实验室。实验性，v0.1.0。
 - [alexmi256/rea-agent-docker](https://github.com/alexmi256/rea-agent-docker) - REA 的 Docker 镜像，共四个：Ghidra + Hopper 合并版，以及 ghidra、hopper、ida 单独版。IDA 镜像不包含 IDA 本身，仅支持 linux/amd64。
 - [moonfruit/homebrew-tap](https://github.com/moonfruit/homebrew-tap/blob/main/Formula/rea-agents.rb) - 一位个人的 Homebrew tap，不是 homebrew-core 官方收录。
+- [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) - 第三方适配插件，把 morluto/rea 的 MCP 服务接入 DeepSeek Harness，提供 `mcp__rea__*` 工具。2.x 会自动安装 REA CLI、JDK 和 Ghidra。
+- [ShadowSwaps/REA-Reconstruction-Companion](https://github.com/ShadowSwaps/REA-Reconstruction-Companion) - Agent Skill，把 REA 的发现整理成复原所需的规格、架构、计划和验证步骤。
 
 ## 教程与深度调研
 
@@ -157,6 +161,8 @@
 - [Reverse Engineer Anything: What the Viral REA MCP Actually Does（MindStudio）](https://www.mindstudio.ai/blog/reverse-engineer-anything-mcp) - 去掉炒作后，REA 实际能做什么。
 - [Agentic Reverse Engineering: What REA Is and How to Start（El Solitario）](https://elsolitario.org/en/2026/10/10/rea-reverse-engineering-for-coding-agents/) - 上手教程。
 - [How To Use REA To Clone Any Software In Minutes（Eric Tech，YouTube）](https://www.youtube.com/watch?v=FnB9tHKBJXQ) - 视频教程。
+- [inematds/rea-engenharia-reversa](https://github.com/inematds/rea-engenharia-reversa) - 🇧🇷 有葡语、英语和西语三个版本的 REA 指南，包含链接、案例、客观评估和实际测试。
+- [ZooHero500/reatool](https://github.com/ZooHero500/reatool) - 非官方的 REA 教程与对比，讲如何在编码 Agent 中安装和使用。与 morluto 无关。
 
 ## 相关 MCP 逆向工具
 
